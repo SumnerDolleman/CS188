@@ -26,12 +26,23 @@ const cart = {
     complete: 'true'
 };
 
-const cartitems = {
-	itemid:'b7671ac6-50d7-11ea-8d77-2e728ce88125',
-    descriptionitem:'Bean Bag Chair',
-    quantity: 1,
-    cartId:'cc573f256-50d7-11ea-8d77-2e728ce88125'
-};
+const cartItems = [
+{
+cartid: 'c573f256-50d7-11ea-8d77-2e728ce88125',
+cartItemId: '4b6c8cfe-512a-11ea-8d77-2e728ce88125',
+descriptionitem:'Bean Bag Chair',
+itemid:'b7671ac6-50d7-11ea-8d77-2e728ce88125',
+quantity: 3
+},
+{
+cartid: 'c573f256-50d7-11ea-8d77-2e728ce88125',
+cartItemId: '5b6c8cfe-512a-11ea-9d66-2e728ce88135',
+descriptionitem:'Not a Bean Bag Chair',
+itemid:'c7761ac6-40d7-11eb-8e77-2d728ce88124',
+quantity: 2
+}
+];
+
 
 console.log('item', item);
 console.log('customer', customer);
