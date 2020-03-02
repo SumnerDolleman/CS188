@@ -2,10 +2,10 @@ const uuid = require('uuid');
 
 let customers = [
     {
-        'customer_id': 'd83ff143-9f8b-445a-8d8f-b9b8fe0f9f28',
-        'first_name': 'Jason',
-        'last_name': 'Bradley',
-        'email': 'jason.bradley@drake.edu'
+        'customer_id': '7f3a8656-5cd5-11ea-bc55-0242ac130003',
+        'first_name': 'Stu',
+        'last_name': 'Dent',
+        'email': 'Stu.Dent@drake.edu'
     }
 ];
 

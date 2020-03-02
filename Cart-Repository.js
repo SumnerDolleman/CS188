@@ -3,13 +3,13 @@ const uuid = require('uuid');
 let carts = [
     {
         'cart_id': uuid.v4(),
-        'customer_id': 'd83ff143-9f8b-445a-8d8f-b9b8fe0f9f28',
+        'customer_id': '7f3a8656-5cd5-11ea-bc55-0242ac130003',
         'created_date': new Date(),
         'purchased_date': new Date()
     },
     {
         'cart_id': uuid.v4(),
-        'customer_id': 'd83ff143-9f8b-445a-8d8f-b9b8fe0f9f28',
+        'customer_id': '7f3a8656-5cd5-11ea-bc55-0242ac130003',
         'created_date': new Date(),
         'purchased_date': new Date()
     }
