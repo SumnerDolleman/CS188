@@ -1,0 +1,48 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.1/libexec/bin/yarn.js run test
+
+PATH: 
+  /anaconda3/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/anaconda3/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin
+
+Yarn version: 
+  1.22.1
+
+Node version: 
+  12.15.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/SUMNER/School Storage/CS 188/package.json: Unexpected token : in JSON at position 15
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.1/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "drake-cs188",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "@hapi/hapi": "^19.1.1",
+      "uuid": "^3.4.0"
+    },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
