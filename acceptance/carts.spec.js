@@ -60,7 +60,7 @@ const frisby = require('frisby');
                  .expect('status', 204);
 
              const response = await frisby
-                 .get(`http://localhost:3000/carts/${cartId}`)
+                  .get(`http://localhost:3000/carts/${cartId}`)
                  .expect('status', 200);
 
              expect(response.json).toEqual(updateCart);
@@ -76,7 +76,7 @@ const frisby = require('frisby');
 
              await frisby.post('http://localhost:3000/carts', anotherCart);
 
-             await frisby.del(`http://localhost:3000/carts/${anotherCart.cartId}`)
+              await frisby.del(`http://localhost:3000/carts/${anotherCart.cartId}`)
                  .expect('status', 204);
 
              await frisby.get(`http://localhost:3000/carts/${anotherCart.cartId}`)

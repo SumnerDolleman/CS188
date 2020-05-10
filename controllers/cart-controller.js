@@ -8,20 +8,13 @@ const {
 } = require('../services/cart-service');
 
 const getCartsRoute = (server) => {
-    server.route({
-        path: '/carts',
-        method: 'GET',
-        handler: (request, h) => {
+    app.get('/carts', function (request, h){
             return getAllCarts();
-        }
     });
 };
 
 const getCartByCartIdRoute = (server) => {
-    server.route({
-        path: '/carts/{cartId}',
-        method: 'GET',
-        handler: (request, h) => {
+    app.get('/carts/{cartId}', function (request, h) {
             const cart = getCartByCartId(request.params.cartId);
 
             if (!cart) {
@@ -29,42 +22,27 @@ const getCartByCartIdRoute = (server) => {
             }
 
             return cart;
-        }
     });
 };
 
 const addCartsRoute = (server) => {
-    server.route({
-        handler: (request, h) => {
+    app.post('/carts', function (request, h) {
             const cart = request.payload;
             addCart(cart);
             return h.response(cart).code(201);
-        },
-        method: 'POST',
-        path: '/carts'
     });
 };
 const modifyCartRoute = (server) => {
-    server.route({
-        handler: (request) => {
+    app.put('/carts/{cartId}', function(request) {
             modifyCart(request.payload);
             return '';
-        },
-
-        method: 'PUT',
-        path: '/carts/{cartId}'
     });
 };
 
 const deleteCartRoute = (server) => {
-    server.route({
-        handler: (request) => {
+    app.delete('/carts/{cartId}', function (request) {
             removeCartByCartId(request.params.cartId);
             return '';
-        },
-
-        method: 'DELETE',
-        path: '/carts/{cartId}'
     });
 };
 const initCartControllers = (server) => {

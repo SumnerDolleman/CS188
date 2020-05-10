@@ -4,20 +4,12 @@ const {
 } = require('../services/items-service');
 
 const getItemsRoute = (server) => {
-    server.route({
-        path: '/items',
-        method: 'GET',
-        handler: (request, h) => {
-            return getAllItems();
-        }
-    });
-};
-
+    app.get(' /items', function (req, res){
+        res.send(getAllItems);
+        });
+    };
 const getItemByItemIdRoute = (server) => {
-    server.route({
-        path: '/items/{itemId}',
-        method: 'GET',
-        handler: (request, h) => {
+    app.get( '/items/{itemId}', function (request, h) {
             const item = getItemByItemId(request.params.itemId);
 
             if (!item) {
@@ -25,8 +17,7 @@ const getItemByItemIdRoute = (server) => {
             }
 
             return item;
-        }
-    });
+    })
 };
 
 const initItemControllers = (server) => {

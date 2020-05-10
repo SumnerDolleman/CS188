@@ -4,20 +4,13 @@ const {
 } = require('../services/cart-items-service');
 
 const getCartItemsRoute = (server) => {
-    server.route({
-        path: '/cart-items',
-        method: 'GET',
-        handler: (request, h) => {
+    app.get('/cart-items', function (request, h) {
             return getAllCartItems();
-        }
     });
 };
 
 const getCartItemsByItemIdRoute = (server) => {
-    server.route({
-        path: '/cart-items/{cartItemId}',
-        method: 'GET',
-        handler: (request, h) => {
+    app.get('/cart-items/{cartItemId}', function(request, h) {
             const cartItems = getCartItemsByItemId(request.params.cartItemId);
 
             if (!cartItems) {
@@ -25,7 +18,6 @@ const getCartItemsByItemIdRoute = (server) => {
             }
 
             return cartItems;
-        }
     });
 };
 
